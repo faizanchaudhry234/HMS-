@@ -1,0 +1,11 @@
+{
+  "name": "hospital-management-system-mern-stack-main",
+  "version": "1.0.0",
+  "description": "<img src=\"images/1.jpg\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
