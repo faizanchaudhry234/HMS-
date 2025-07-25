@@ -25,14 +25,13 @@ app.use("/appointment",limiter, appointmentController);
 app.use("/admin",limiter, adminController);
 app.use(errorHandlerMiddleware);
 
+// server.js (INSIDE backend/)
 (async () => {
   try {
     await connectToDatabase();
-    const port = process.env.PORT || 4451;
-    const server = app.listen(port, () => {
-      console.log(`Server running on port: ${port}`);
-    });
   } catch (error) {
-    console.error("Failed to start the server:", error.message);
+    console.error("Failed to connect to the database:", error.message);
   }
 })();
+
+module.exports = app; // Do NOT call app.listen()
